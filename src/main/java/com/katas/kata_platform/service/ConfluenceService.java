@@ -18,7 +18,7 @@ public class ConfluenceService {
     private final String atlassianEmail = "caoralejayese@gmail.com";
 
     // Tu token de API (mejor moverlo a una variable de entorno)
-    private final String confluenceApiToken = "ATATT3xFfGF0E_c1r13FQUVM7eLbtfZieKnyTTkaukODPZJAd1XSTmUxTcJsOF6GJspPagWOvDbOkY6utP-KdBjJzGi6PpnEm6JHFj35dwSydR6AExRlUyh4Y7MBATpH5kbmD20A5Z9PZHNmkbEa2cG_mfE8KLf-o0dm7K4nnY5BlIodM-ROqIA=7F533862";
+    private final String confluenceApiToken = "";
 
     public void publicarResultados(String contenido) {
         RestTemplate restTemplate = new RestTemplate();
