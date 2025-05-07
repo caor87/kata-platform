@@ -11,19 +11,15 @@ import java.util.Map;
 @Service
 public class ConfluenceService {
 
-    // Tu dominio Confluence: reemplaza "caoralejayese" si es diferente
-    private final String confluenceApiUrl = "https://caoralejayese.atlassian.net/wiki/spaces/KATA/overview?homepageId=131439";
+    private final String confluenceApiUrl = "https://caoralejayese.atlassian.net/wiki/rest/api/content";
 
-    // Tu email de Atlassian
     private final String atlassianEmail = "caoralejayese@gmail.com";
 
-    // Tu token de API (mejor moverlo a una variable de entorno)
     private final String confluenceApiToken = "";
 
     public void publicarResultados(String contenido) {
         RestTemplate restTemplate = new RestTemplate();
 
-        // Codificar en base64 el email + token
         String auth = atlassianEmail + ":" + confluenceApiToken;
         String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes(StandardCharsets.UTF_8));
 
